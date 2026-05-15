@@ -122,7 +122,9 @@ export const deleteGame = async (id) => {
     await connection.execute("DELETE FROM spel_genre WHERE SpelID = ?", [id]);
     await connection.execute("DELETE FROM spel WHERE ID = ?", [id]);
     await connection.commit();
+    return { message: "Spelet raderades" };
     return rows[0];
+    
   } catch (error) {
     await connection.rollback();
     throw error;
