@@ -34,6 +34,7 @@ export const findGamesPerGenre = () =>
   );
 
   //Lägg till ett spel:
+  //(Just nu kan man tyvärr inte lägga till flera genres & plattformar till spelet.)
 export const addGame = async ({
   spelnamn,
   plattformId,
